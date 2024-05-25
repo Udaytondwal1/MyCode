@@ -1,0 +1,378 @@
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .section1 {
+            box-sizing: border-box;
+            height: 80vh;
+            width: 100vw;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            /* gap: 4vw; */
+            /* border: 2px solid red; */
+        }
+
+        .color-dash {
+            height: .2vw;
+            width: 1.5vw;
+            background-color: orangered;
+            display: block;
+            margin: auto;
+            border-radius: 20px;
+            margin-top: 5px;
+        }
+
+        .dash {
+            height: .2vw;
+            width: 3vw;
+            background-color: white;
+            display: block;
+            margin: auto;
+            border-radius: 20px;
+        }
+
+        .row1 {
+            margin-top: .3vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* border: solid black 2px; */
+            height: 40%;
+            width: 70%;
+            overflow: hidden;
+        }
+
+        .row1 .imgbox {
+            width: 48%;
+            height: 100%;
+            /* border: 2px solid red; */
+        }
+
+        .row1 .imgbox img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .row1 .para {
+            width: 48%;
+            height: 100%;
+            /* background-color: red; */
+            display: flex;
+            align-items: center;
+        }
+
+        .section2 {
+            height: 50vh;
+            width: 100vw;
+            margin: 1vw 0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./big-sur-mountains-clouds-sunrise-morning-macos-big-sur-6016x6016-1497.jpg');
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section2 .content {
+            height: 70%;
+            width: 60%;
+            /* border: 2px solid yellow; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+
+        .section3 {
+            height: 60vh;
+            width: 100vw;
+            margin: 1vw 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: center; */
+            background-color: burlywood;
+            text-align: center;
+        }
+
+        .section3 .body-content div {
+            height: 35%;
+            width: 30%;
+            /* border: 2px solid red; */
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: -10px;
+            /* justify-content: space-evenly; */
+            /* align-items: center; */
+        }
+
+        .section3 .heading {
+            height: 20%;
+            width: 80%;
+            margin-top: 20px;
+        }
+
+        .section3 .body-content {
+            height: 80%;
+            width: 80%;
+            margin-top: -20px;
+            /* border: 2px solid black; */
+            /* padding: 5vw; */
+            display: flex;
+            /* align-items: center; */
+            align-content: space-around;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+
+        .section4 {
+            height: 70vh;
+            width: 100vw;
+            font-family: Arial, sans-serif;
+            /* background-color: #f0f0f0; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0;
+        }
+
+
+        .testimonial-section {
+            height: 70%;
+            width: 70%;
+            /* margin: auto; */
+            background-color: #fcf5d4;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+       .testimonial-section  .testimonial-wrapper .swiper-wrapper {
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+        }
+
+        .testimonial-wrapper .swiper-wrapper .testimonial-slide {
+            /* flex: 0 0 50%; */
+            width: 50%;
+            box-sizing: border-box;
+            padding: 20px;
+            margin: 0 1%;
+            background-color: #f7b009;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            height: 200px;
+            /* Adjust height as needed */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .testimonial-wrapper .swiper-wrapper .testimonial-slide img {
+            border-radius: 50%;
+            width: 65px;
+            height: 65px;
+            /* margin-bottom: 10px; */
+            /* z-index: 0; */
+        }
+
+
+        .testimonial-section .btn {
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            background-color: rgba(255, 125, 60, 0.747);
+            color: #fff;
+            overflow: hidden;
+            border: none;
+            border-radius: 50px;
+            /* padding: 10px; */
+            cursor: pointer;
+            /* font-size: 18px; */
+            transition: background-color 0.3s ease;
+        }
+
+        .testimonial-section  .btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        @media (max-width: 600px) {
+            .testimonial-wrapper .swiper-wrapper .testimonial-slide {
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/5c53472e49.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="section1">
+        <div>
+            <h1>About Us</h1>
+            <span class="color-dash"></span>
+        </div>
+        <div class="row1">
+            <div class="para">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolorem maiores voluptatem,
+                    quisquam totam molestias quae amet delectus iusto laudantium et sequi nostrum placeat obcaecati
+                    aperiam
+                    exercitationem necessitatibus suscipit hic!</p>
+            </div>
+            <div class="imgbox">
+                <img src="/big-sur-mountains-clouds-sunrise-morning-macos-big-sur-6016x6016-1497.jpg" alt="">
+            </div>
+        </div>
+        <div class="row1">
+            <div class="imgbox">
+                <img src="/big-sur-mountains-clouds-sunrise-morning-macos-big-sur-6016x6016-1497.jpg" alt="">
+            </div>
+            <div class="para">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolorem maiores voluptatem,
+                    quisquam totam molestias quae amet delectus iusto laudantium et sequi nostrum placeat obcaecati
+                    aperiam
+                    exercitationem necessitatibus suscipit hic!</p>
+            </div>
+        </div>
+    </section>
+    <section class="section2">
+        <div class="content">
+            <p><i>Positive Health Zone is a holistic healthcare organization established under the leadership of Dr.
+                    Anil K. Gupta. Our approach to holistic health care focuses on the body, mind, and spirit to achieve
+                    optimal health by addressing various dimensions of health: physical, emotional, intellectual,
+                    social, spiritual, environmental, and occupational. Lifestyle modification and stress management are
+                    crucial to tackling most health issues.</i></p>
+            <div class="dash"></div>
+            <p><i>Positive health predicts increased longevity, decreased health costs, better mental health in aging,
+                    and improved prognosis when illness strikes. PHZ's aim is to encourage the prevention of disease and
+                    the regeneration of health and well-being. Our passion is to empower people to take responsibility
+                    for their health and well-being by promoting the connection between mind, body, brain, and soul. We
+                    recognize the need for physical activity, healthy foods, adequate sleep, and avoiding risky
+                    behaviors involving unsafe activities and substances.</i></p>
+        </div>
+    </section>
+    <section class="section3">
+        <div class="heading">
+            <h1>Our Product Range</h1>
+        </div>
+        <div class="body-content">
+
+            <div>
+                <i class="fa-brands fa-nfc-directional fa-2x"></i>
+                <p>Developing a healthy respect for and acceptance of oneself and having effective coping skills for
+                    life’s ups and downs.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-people-arrows fa-2x"></i>
+                <p>
+                    Developing a sense of connection and community with others: family, friends, co-workers, neighbors,
+                    etc.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-seedling fa-2x"></i>
+                <p>
+                    Promoting and occupying safe, pleasant, and stimulating environments that support good health,
+                    safety, and well-being. Caring about the health of the planet.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-brain fa-2x"></i>
+                <p>
+                    Recognizing creative abilities and finding ways to expand knowledge and skills.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-hands-holding-circle fa-2x"></i>
+                <p>
+                    Being open to a sense of purpose and meaning in life, whether religious or not.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-face-smile fa-2x"></i>
+                <p>
+                    Finding personal satisfaction and enrichment from work and/or school.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section4">
+        
+        <div>
+            <h2>Our Leadership Team</h2>
+            <span class="color-dash"></span>
+        </div>
+        <section class="testimonial-section">
+            <div class="swiper container testimonial-wrapper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide testimonial-slide">
+                        <img src="https://via.placeholder.com/80" alt="John Doe">
+                        <p>"This product is amazing! It has changed my life for the better."</p>
+                        <h4>John Doe</h4>
+                    </div>
+                    <div class="swiper-slide testimonial-slide">
+                        <img src="https://via.placeholder.com/80" alt="Jane Smith">
+                        <p>"Excellent customer service and a wonderful experience overall."</p>
+                        <h4>Jane Smith</h4>
+                    </div>
+                    <div class="swiper-slide testimonial-slide">
+                        <img src="https://via.placeholder.com/80" alt="Sam Johnson">
+                        <p>"High quality and reliable. I highly recommend this to everyone."</p>
+                        <h4>Sam Johnson</h4>
+                    </div>
+                    <div class="swiper-slide testimonial-slide">
+                        <img src="https://via.placeholder.com/80" alt="Emily Davis">
+                        <p>"Great product and fantastic support team. Very satisfied."</p>
+                        <h4>Emily Davis</h4>
+                    </div>
+                </div>
+
+                <button class="swiper-button-prev btn"></button>
+                <button class="swiper-button-next btn"></button>
+
+            </div>
+        </section>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // Initialize Swiper
+        var swiper = new Swiper('.swiper', {
+            slidesPerView: '2',
+            spaceBetween: 10,
+            centeredSlides: false,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+    </script>
+</body>
